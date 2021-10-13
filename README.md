@@ -1,6 +1,6 @@
 
 
-![image](https://github.com/universitychat/app/blob/main/assets/logo-unichat-transparent.png)
+![image](https://github.com/universitychat/app/blob/main/assets/logo-unichat-small.jpg)
 
 ---
 
