@@ -1,3 +1,5 @@
+
+
 ![image](https://github.com/universitychat/app/blob/main/assets/logo-unichat-small.jpg)
 
 ---
@@ -8,6 +10,6 @@ Unichat is a simple chat platform that is developed by students during a course 
 
 ## Tasks
 
-- Github Basics
-  - [x] Github Pages
-  - [] Add developers to project
+- [x] Create Github Repository
+- [x] Set up Github Pages
+- [ ] Add developers to project
