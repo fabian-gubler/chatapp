@@ -14,8 +14,8 @@ Unichat is a simple chat platform that is developed by students during a course 
 
 - [x] Create Github Repository
 - [x] Set up Github Pages
+- [x] Add Stories to our Board
 - [ ] Add developers to project
-- [ ] Add Stories to our Board
  
 #### User Stories
 
