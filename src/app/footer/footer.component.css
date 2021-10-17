@@ -1,0 +1,13 @@
+div {
+  position: absolute;
+  border-top: 1px solid black;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+}
