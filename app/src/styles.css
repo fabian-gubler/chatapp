@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    background: var(--light-bg-color);
+}
+
+/*Color Variables*/
+:root {
+    --light-bg-color: #FAF3F3;
+    --light-text-color: #27323A;
+    --light-divider-color: rgba(39, 50, 58, 0.2);
+    --light-gradient-color1: #90E857;
+    --light-gradient-color2: #3AD59F;
+    --light-error-color: #FF7878;  
+}
+
+p {
+    color: var(--light-text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: var(--light-text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30pt;
+}

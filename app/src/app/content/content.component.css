@@ -1,0 +1,9 @@
+.content{
+    height: calc(100vh - 200px);
+    margin-top: 20px;
+}
+.PLACEHOLDER{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
