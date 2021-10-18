@@ -8,30 +8,10 @@
 
 Unichat is a simple chat platform that is developed by students during a course at the University of St. Gallen. This Webapp is created using angular as a framework.
 
-## Tasks
-
-#### Project Management
-
-- [x] Create Github Repository
-- [x] Set up Github Pages
-- [x] Add Stories to our Board
-- [x] Add developers to project
- 
-#### User Stories
-
-- [ ] Story 1: Structure
-
-*Als Chatbenutzer möchte ich eine strukturierte Webseite, damit ich eine schnelle Übersicht der*
-
-- [ ] Story 2: Logo
-
-*Als Chatbetreiber möchte ich ein Logo auf der Seite haben, damit die Seite einen hohen Wiedererkennungswert hat.*
-
 ## Ideas
 
 #### Testing / Deployment
-- Look into Github actions
-- Manage Git merge conflicts
+- Look into Github actions for automatic deployment
 
 #### UI Design
 - Colour Palette Definition
