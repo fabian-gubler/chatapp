@@ -1,4 +1,13 @@
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 221px);
+  margin-top: 20px;
+}
+  
 .message-container {
+  flex: 1;
   border-radius: 3px;
   padding: 50px;
   margin: 0 0 40px 0;
@@ -14,16 +23,17 @@
 
 .form label {
   font-size: 26px;
-  color: black;
+  color: var(--light-text-color);
   margin-bottom: 15px;
 }
 
 .form textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  border: 1px solid grey;
+  border: 1px solid var(--light-text-color);
+  background-color: var(--light-bg-color);
   border-radius: 6px;
-  min-height: 100px;
+  min-height: 200px;
   margin-bottom: 10px;
   padding: 7px;
   resize: none;
@@ -44,7 +54,7 @@
   font-weight: bold;
 
   color: white;
-  background-color: #5995DA;
+  background-color: var(--light-gradient-color2);
 
   border: none;
   border-radius: 6px;
@@ -54,7 +64,7 @@
 }
 
 .form button:hover {
-  background-color: #76AEED;
+  background-color: var(--light-gradient-color1);
 }
 
 .form button:active {
