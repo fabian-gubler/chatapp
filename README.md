@@ -1,8 +1,8 @@
 #### Installation (Git)
 1. Open Terminal
-2. **Download Files**: git clone https://github.com/universitychat/website.git
-3. **Go in to the Folder: cd website
-4. (Optional) **Update Folder**: git pull
+2. Download Files: ```git clone https://github.com/universitychat/website.git```
+3. Go in to the Folder: ```cd website```
+4. (Optional) Update Folder: ```git pull```
 
 ---
 
