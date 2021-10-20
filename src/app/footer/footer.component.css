@@ -12,7 +12,6 @@
     justify-content: center;
     border-color: var(--light-error-color);
     border: 2px;
-    margin-left: -201px;
 }
 .logo_dark{
     height: 70%;
