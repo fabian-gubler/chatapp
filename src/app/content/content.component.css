@@ -1,9 +1,20 @@
 .content{
     height: calc(100vh - 221px);
     margin-top: 20px;
+    padding: 0 30px 0 30px;
 }
 .PLACEHOLDER{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 400px) {
+    .content{
+        height: calc(100vh - 122px);
+        margin-top: 20px;
+    }
+    h1{
+        font-size: 21px;
+    }
 }

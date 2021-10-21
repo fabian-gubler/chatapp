@@ -21,3 +21,10 @@
 p{
     color: var(--light-bg-color);
 }
+
+
+@media (max-width: 400px) {
+    .footer {
+        height: 50px;        
+    }
+}

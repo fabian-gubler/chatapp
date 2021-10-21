@@ -25,3 +25,8 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30pt;
 }
+
+label{
+    color: var(--light-text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
