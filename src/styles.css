@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     margin: 0;
-    background: var(--light-bg-color);
+    background: var(--white);
 }
 
 /*Color Variables*/
@@ -12,7 +12,8 @@ body {
     --light-gradient-color1: #90E857;
     --light-gradient-color2: #3AD59F;
     --light-error-color: #FF7878;
-    --hsg-color: #00802f;  
+    --hsg-color: #00802f;
+    --white: #FFF;
 }
 
 p {
