@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 221px);
-  margin-top: 20px;
+  height: calc(100vh - 201px);
 }
   
 .message-container {
@@ -22,17 +21,17 @@
 }
 
 .form label {
-  font-size: 26px;
+  font-size: 30pt;
   color: var(--light-text-color);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .form textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  border: 1px solid var(--light-text-color);
-  background-color: var(--light-bg-color);
+  border: 2px solid var(--light-divider-color);
   border-radius: 6px;
+  background-color: var(--light-bg-color);
   min-height: 200px;
   margin-bottom: 10px;
   padding: 7px;
@@ -44,29 +43,14 @@
   box-shadow: 0 0 5px #5995DA;
 }
 
-.form button {
-  display: flex;
-  justify-content: center;
-  align-self: flex-end;
-
-  width: 10%;
-  font-size: 16px;
-  font-weight: bold;
-
-  color: white;
-  background-color: var(--light-gradient-color2);
-
-  border: none;
-  border-radius: 6px;
-
-  padding: 10px 40px;
-  cursor: pointer;
+@media (max-width: 600px) {
+  .form label{
+    font-size: 21px;
+  }
+  .form textarea {
+    min-height: 100px;
+  }
+  .content{
+    height: calc(100vh - 102px);
 }
-
-.form button:hover {
-  background-color: var(--light-gradient-color1);
-}
-
-.form button:active {
-  background-color: #407FC7;
 }
