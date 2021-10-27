@@ -1,18 +1,18 @@
-.content{
+.writeText{
   display: flex;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 201px);
 }
   
-.message-container {
+.textbox {
   flex: 1;
   border-radius: 3px;
   padding: 50px;
   margin: 0 0 40px 0;
 }
 
-.form {
+.textbox {
   margin-bottom: 40px;
   display: flex;
   justify-content: flex-start;
@@ -20,13 +20,13 @@
   flex-wrap: wrap;
 }
 
-.form label {
+.textbox label {
   font-size: 30pt;
   color: var(--light-text-color);
   margin-bottom: 10px;
 }
 
-.form textarea {
+.textbox textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   border: 2px solid var(--light-divider-color);
@@ -38,19 +38,19 @@
   resize: none;
 }
 
-.form textarea:focus {
+.textbox textarea:focus {
   border: 1px solid #5995DA;
   box-shadow: 0 0 5px #5995DA;
 }
 
 @media (max-width: 600px) {
-  .form label{
+  .textbox label{
     font-size: 21px;
   }
-  .form textarea {
+  .textbox textarea {
     min-height: 100px;
   }
-  .content{
+  .message{
     height: calc(100vh - 102px);
 }
 }

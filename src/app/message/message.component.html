@@ -1,14 +1,7 @@
-<div class="content">
-  <form method="get" class="message-container">
-  <div class='form'>
-
-    <!-- Text Area -->
-    <label for='message'>Message</label>
-    <textarea id='message' name='message' placeholder="Type a message..."></textarea>
-    
-    <!-- Button -->
-    <button class="button">Submit</button>
-
+<div class="writeText">
+  <div class="textbox">
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" placeholder="Hier könnte Ihre Nachricht stehen!" [(ngModel)]="chatMessage" (keyup.enter)="post_message(chatMessage)"></textarea>
   </div>
-  </form>
+    <button class="button" (click)="post_message(chatMessage)" [disabled]="!chatMessage">Send</button>
 </div>
