@@ -6,13 +6,10 @@
 }
   
 .textbox {
-  flex: 1;
+  width: 90%;
   border-radius: 3px;
   padding: 50px;
-  margin: 0 0 40px 0;
-}
-
-.textbox {
+  
   margin-bottom: 40px;
   display: flex;
   justify-content: flex-start;
@@ -39,18 +36,22 @@
 }
 
 .textbox textarea:focus {
-  border: 1px solid #5995DA;
-  box-shadow: 0 0 5px #5995DA;
+  border: 1px solid var(--light-highlight-color);
+  box-shadow: 0 0 5px var(--light-highlight-color);
 }
 
 @media (max-width: 600px) {
+  .textbox {
+    width: 100%;
+    padding: 25px;
+  }
   .textbox label{
     font-size: 21px;
   }
   .textbox textarea {
     min-height: 100px;
   }
-  .message{
-    height: calc(100vh - 102px);
+  .writeText{
+    height: calc(100vh - 100px);
 }
 }
