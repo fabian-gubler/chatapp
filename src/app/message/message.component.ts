@@ -13,7 +13,6 @@ export class MessageComponent {
   public post_message(message: string): void {
     
     if (message == '') {
-      this.chatMessage = ''
       return
     }
     
