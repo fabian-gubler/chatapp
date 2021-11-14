@@ -11,7 +11,13 @@ export class MessageComponent {
   public chatMessage = '';
 
   public post_message(message: string): void {
+    
+    if (message == '') {
+      return
+    }
+
     console.log(message)
+    
     this.chatMessage = ''
     return
   }
