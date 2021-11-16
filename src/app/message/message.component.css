@@ -10,7 +10,6 @@
   border-radius: 3px;
   padding: 50px;
   
-  margin-bottom: 40px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -18,21 +17,22 @@
 }
 
 .textbox label {
-  font-size: 30pt;
+  font-size: 28px;
   color: var(--light-text-color);
-  margin-bottom: 10px;
 }
 
 .textbox textarea {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 21px;
   border: 2px solid var(--light-divider-color);
   border-radius: 6px;
   background-color: var(--light-bg-color);
-  min-height: 200px;
   margin-bottom: 10px;
   padding: 7px;
-  resize: none;
+
+  height: calc(100vh - 351px);
+  max-height: 300px;
+  min-height: 50px;
 }
 
 .textbox textarea:focus {
@@ -40,7 +40,7 @@
   box-shadow: 0 0 5px var(--light-highlight-color);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px), (max-height: 500px){
   .textbox {
     width: 100%;
     padding: 25px;
@@ -49,9 +49,12 @@
     font-size: 21px;
   }
   .textbox textarea {
-    min-height: 100px;
+    height: calc(100vh - 201px);
+    max-height: 300px;
+    font-size: 16px;  
   }
   .writeText{
     height: calc(100vh - 101px);
+    
 }
 }

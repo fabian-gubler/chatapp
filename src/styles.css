@@ -61,7 +61,7 @@ label{
     border-color: var(--hsg-color);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px), (max-height: 500px){
         
     h1{
         font-size: 21px;
