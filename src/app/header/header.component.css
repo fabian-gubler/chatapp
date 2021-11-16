@@ -5,6 +5,7 @@
     align-items: center;
     border-color: var(--light-text-color);
     border-bottom: 1px solid var(--light-divider-color);
+    
 }
 .logo_light{
     height: 70%;
