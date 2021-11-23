@@ -7,13 +7,15 @@ import { FooterComponent } from './footer/footer.component';
 import { MessageComponent } from './message/message.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { ChatHistoryComponent } from './chat-history/chat-history.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
       HeaderComponent,
       FooterComponent,
-      MessageComponent
+      MessageComponent,
+      ChatHistoryComponent
    ],
   imports: [
     BrowserModule,

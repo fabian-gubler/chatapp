@@ -12,13 +12,16 @@ export class MessageComponent {
 
   public post_message(message: string): void {
     
-    if (message == '') {
+    /* test for empty (empty or newline because enter; maybe profanity filter*/
+    if (message === '') {
       return
     }
 
     console.log(message)
     
     this.chatMessage = ''
+
+
     return
   }
 
