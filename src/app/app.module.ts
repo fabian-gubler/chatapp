@@ -9,11 +9,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
       HeaderComponent,
       FooterComponent,
-      MessageComponent
+      MessageComponent,
    ],
   imports: [
     BrowserModule,
