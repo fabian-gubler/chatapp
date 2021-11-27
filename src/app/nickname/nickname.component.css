@@ -35,11 +35,13 @@
   }
   
   .alertError {
+	font-size: 21px;
 	color: var(--light-error-color);
 	text-align: left;
   }
 
   .alertSucess {
+	font-size: 21px;
 	color: var(--light-gradient-color2);
 	text-align: left;
   }

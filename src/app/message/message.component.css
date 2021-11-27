@@ -41,6 +41,7 @@
 }
 
 .alertError {
+	font-size: 21px;
 	color: var(--light-error-color);
 	text-align: left;
 }
