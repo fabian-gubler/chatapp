@@ -1,3 +1,5 @@
 <app-header></app-header>
-<app-message></app-message>
+<app-chat_history [history]='messageHistory'></app-chat_history>
+<app-nickname (submitNickname) = 'onSubmitNickname($event)'></app-nickname>
+<app-message [nickname]='nickname' (submitMessage) = "onSubmitMessage($event)"></app-message>
 <app-footer></app-footer>
