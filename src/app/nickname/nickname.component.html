@@ -2,6 +2,8 @@
   <div class="nicknamebox">
     <label for="Nickname">Nickname</label>
     <input type="text" placeholder="Dein Nickname" maxlength="15" [(ngModel)]='init_nickname' (keyup.enter)=save_nickname(init_nickname)>
-    <button class = 'button' type = 'submit' (click)="save_nickname(init_nickname)">Nickname speichern</button>
+    <button class= 'button' type= 'submit' (click)="save_nickname(init_nickname) ">Nickname speichern</button>
+	<div class='alertError' [hidden]='!errorMessage' [innerHTML]='errorMessage'>test</div>
+	<div class='alertSucess' [innerHTML]='savemsg'>test</div>
   </div>
 </div>

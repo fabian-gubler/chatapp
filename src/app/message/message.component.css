@@ -40,6 +40,11 @@
   box-shadow: 0 0 5px var(--light-highlight-color);
 }
 
+.alertError {
+	color: var(--light-error-color);
+	text-align: left;
+}
+
 @media (max-width: 600px), (max-height: 500px){
   .textbox {
     width: 100%;
