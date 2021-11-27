@@ -34,6 +34,18 @@
 
   }
   
+  .alertError {
+	font-size: 21px;
+	color: var(--light-error-color);
+	text-align: left;
+  }
+
+  .alertSucess {
+	font-size: 21px;
+	color: var(--light-gradient-color2);
+	text-align: left;
+  }
+
   .nicknamebox textarea:focus {
     border: 1px solid var(--light-highlight-color);
     box-shadow: 0 0 5px var(--light-highlight-color);
