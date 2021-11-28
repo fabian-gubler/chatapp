@@ -2,7 +2,7 @@
   <div class="textbox">
     <label for="message">Message</label>
     <textarea id="message" rows="5" placeholder="Hier könnte Ihre Nachricht stehen!" [(ngModel)]="chatMessage" (keyup.enter)="post_message(chatMessage, nickname)"></textarea>
-    <button class="button" (click)="post_message(chatMessage, nickname)" [disabled]="!chatMessage">Send</button>
+    <button class="button_round" (click)="post_message(chatMessage, nickname)" [disabled]="!chatMessage">Send</button>
 	<div class='alertError' [hidden]='chatMessage' [innerHTML]='errorMessage'>test</div>
   </div>
 </div>

@@ -2,11 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 200px);
+  height: auto;
+  width: 1000px;
 }
   
 .textbox {
-  width: 90%;
+  width: 100%;
   border-radius: 3px;
   padding: 50px;
   
@@ -30,9 +31,7 @@
   margin-bottom: 10px;
   padding: 7px;
 
-  height: calc(100vh - 350px);
-  max-height: 300px;
-  min-height: 50px;
+  height: 80px;
 }
 
 .textbox textarea:focus {

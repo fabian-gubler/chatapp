@@ -61,6 +61,34 @@ label{
     border-color: var(--hsg-color);
 }
 
+.button_round{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    
+    background-color: var(--white);
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid var(--light-text-color);
+    
+    font-size: 12pt;
+    font-weight: bold;
+    color: var(--light-text-color);
+    padding: 10px 40px;
+   
+    cursor: pointer;
+}
+.button_round:hover{
+    background-color: var(--light-text-color);
+    color: var(--white);
+}
+.button_round:active{
+    background-color: var(--hsg-color);
+    color: var(--white);
+    border-color: var(--hsg-color);
+}
+
 @media (max-width: 600px), (max-height: 500px){
         
     h1{
