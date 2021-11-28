@@ -1,5 +1,5 @@
 .history-outercontainer{
-    width: 825px;
+    width: 100%;
     height: calc(100vh - 450px);
     border-radius: 3px;
     padding: 25px;
@@ -27,8 +27,9 @@
     margin-bottom: 10px;
     padding: 7px;
   
-	  min-height: 200px;
-    max-height: 300px;
+    min-height: 200px;
+    height: 60%;
+    max-height: none;
   	overflow: auto;
   }
 
