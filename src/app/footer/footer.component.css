@@ -23,7 +23,7 @@ p{
 }
 
 
-@media (max-width: 600px), (max-height: 500px){
+@media (max-width: 820px), (max-height: 760px){
     .footer {
         height: 50px;        
     }
