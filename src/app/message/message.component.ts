@@ -38,7 +38,7 @@ export class MessageComponent {
 
 		// Chat Output
     const timestamp: string = new Date().toLocaleString('de');
-    const finalmessage = `${nickname} : ${message} - ${timestamp} <br>`;
+    const finalmessage = `${nickname} <br> ${message} --- ${timestamp} <br>`;
 
 		// Push only if valid
 		if (this.errorMessage == '') {
