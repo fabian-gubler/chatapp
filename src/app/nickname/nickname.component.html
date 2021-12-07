@@ -22,8 +22,8 @@
         </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
       
     </button>
-    <div class='alertError' [hidden]='savemsg' [innerHTML]='errorMessage'>test</div>
-    <div class='alertSucess' [innerHTML]='savemsg'>test</div>
+    <div class="suc_err_msg" *ngIf="exit_msg">{{exit_msg}}</div>
+
     </div>
   </div>
 </div>

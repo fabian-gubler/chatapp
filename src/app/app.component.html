@@ -1,9 +1,9 @@
 <app-header></app-header>
-<app-chat_history [history]='messageHistory'></app-chat_history>
+<app-chat_history [chat_history]='chat_history'></app-chat_history>
 <div class="align-center">
 <div class="textbar">
-<app-nickname (submitNickname) = 'onSubmitNickname($event)'></app-nickname>
-<app-message [nickname]='nickname' (submitMessage) = "onSubmitMessage($event)"></app-message>
+<app-nickname></app-nickname>
+<app-message (submitMessage) = "onSubmitMessage($event)"></app-message>
 </div>
 </div>
 <app-footer></app-footer>

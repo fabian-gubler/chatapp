@@ -2,8 +2,8 @@
 	<div class="writeText">
 	<div class="textbox">
 		<label for="message">Nachricht</label>
-		<textarea id="message" rows="5" placeholder="Nachricht..." [(ngModel)]="chatMessage" (keyup.enter)="post_message(chatMessage, nickname)"></textarea>
-		<button class="button_round" (click)="post_message(chatMessage, nickname)" [disabled]="!chatMessage">
+		<textarea id="message" rows="5" placeholder="Nachricht..." [(ngModel)]="chatMessage" (keyup.enter)="post_message(chatMessage)"></textarea>
+		<button class="button_round" (click)="post_message(chatMessage)" [disabled]="!chatMessage">
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
 				<g><g><path d="M509.532,34.999c-2.292-2.233-5.678-2.924-8.658-1.764L5.213,225.734c-2.946,1.144-4.967,3.883-5.192,7.034

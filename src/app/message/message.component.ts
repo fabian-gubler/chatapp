@@ -1,5 +1,6 @@
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
-import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { Person } from '../shared/models/person';
 
 @Component({
   selector: 'app-message',
@@ -9,20 +10,17 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 export class MessageComponent {
 
-  @Input() public nickname = '';
-
-  @Output() public submitMessage = new EventEmitter<string>();
+  @Output() public submitMessage = new EventEmitter<object>();
 
   public chatMessage = '';
-	public errorMessage = '';
-	public validMessage = true;
+  public errorMessage = '';
+  public validMessage = '';
 
-
-  public post_message(message: string, nickname: string): void {
+  public post_message(message: string): void {
 
 		switch(true) {
 			// No Nickname
-			case !nickname:
+			case !Person.Nickname:
 				this.errorMessage = 'Bitte erstelle einen Nickname bevor du eine Nachricht schreibst';
 				break;
 
@@ -34,21 +32,19 @@ export class MessageComponent {
 			// Needed to check validity
 			default:
 				this.errorMessage = ''
-		}
+		};
 
-		// Chat Output
-    const timestamp: string = new Date().toLocaleString('de');
-    const finalmessage = `${nickname} <br> ${message} --- ${timestamp} <br>`;
+	// Chat Output
+    const msg_item = {
+		name: Person.Nickname,
+		msg: message,
+		t_stamp: new Date().toLocaleDateString('de')
+	}
+	
+	this.submitMessage.emit(msg_item);
 
-		// Push only if valid
-		if (this.errorMessage == '') {
-			console.log("sucess")
-			this.submitMessage.emit(finalmessage);
-		}
-
-		// Initialize variable
-    this.chatMessage = '';
-
+	this.chatMessage = '';
+	
     return
   }
 

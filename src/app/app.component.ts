@@ -8,17 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  public messageHistory = '';
+  public chat_history: Array<any> = [];
 
-  public nickname = '';
+  public onSubmitMessage(msg_item: object):void {
+    this.chat_history.push(msg_item)
 
-  public onSubmitMessage(message: string): void {
-    this.messageHistory += message
-
-  }
-
-  public onSubmitNickname(nickname: string): void {
-    this.nickname = nickname
   }
 
 }

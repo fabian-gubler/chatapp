@@ -5,13 +5,8 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './chat_history.component.html',
   styleUrls: ['./chat_history.component.css']
 })
-export class Chat_historyComponent implements OnInit {
+export class Chat_historyComponent {
 
-  @Input() public history = '';
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() public chat_history: Array<any> = [];
 
 }

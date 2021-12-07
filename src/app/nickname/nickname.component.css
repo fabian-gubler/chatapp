@@ -33,18 +33,11 @@
 
   }
   
-  .alertError {
-	font-size: 10pt;
-	color: var(--light-error-color);
-	text-align: left;
-  margin-top: 20px;
-  }
-
-  .alertSucess {
-	font-size: 10pt;
-	color: var(--light-gradient-color2);
-	text-align: left;
-  margin-top: 20px;
+  .suc_err_msg {
+    font-size: 10pt;
+    color: var(--light-gradient-color2);
+    text-align: left;
+    margin-top: 20px;
   }
 
   .nicknamebox textarea:focus {
