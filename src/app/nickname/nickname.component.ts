@@ -22,7 +22,7 @@ export class NicknameComponent {
 		// Check whether multiple words
 		if (nickname.includes(' ')) {
 			this.exit_msg = 'Dein Nickname soll keine Leerzeichen beinhalten';
-      return
+      		return
 		}
 
 		// Maximum character length

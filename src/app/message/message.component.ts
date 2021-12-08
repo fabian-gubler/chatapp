@@ -32,20 +32,22 @@ export class MessageComponent {
 			// Needed to check validity
 			default:
 				this.errorMessage = ''
+		
+
+				// Chat Output
+				const msg_item = {
+					name: Person.Nickname,
+					msg: message,
+					t_stamp: new Date().toLocaleDateString('de')
+				}
+				
+				this.submitMessage.emit(msg_item);
+
+				this.chatMessage = '';
+				
+				return
+			}
+
 		};
-
-	// Chat Output
-    const msg_item = {
-		name: Person.Nickname,
-		msg: message,
-		t_stamp: new Date().toLocaleDateString('de')
-	}
-	
-	this.submitMessage.emit(msg_item);
-
-	this.chatMessage = '';
-	
-    return
-  }
 
 }
