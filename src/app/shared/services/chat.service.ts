@@ -3,22 +3,22 @@ import { Observable } from 'rxjs';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { ChatMessage } from '../models/chatmessage';
 
-
 @Injectable({ providedIn: 'root' })
+
 export class ChatService {
-  private actionUrl = 'http://localhost:3000/history';
+  private historyurl = 'http://localhost:3000/history';
 
   constructor(private httpClient: HttpClient) {}
 
   public addMessage(message: ChatMessage): Observable<ChatMessage> {
-    const options = {
+    const params = {
       headers: new HttpHeaders().set('Content-Type', 'application/json'),
     };
 
-    return this.httpClient.post<ChatMessage>(this.actionUrl, message, options);
+    return this.httpClient.post<ChatMessage>(this.historyurl, message, params);
   }
 
   public getHistory(): Observable<ChatMessage[]> {
-    return this.httpClient.get<ChatMessage[]>(this.actionUrl);
+    return this.httpClient.get<ChatMessage[]>(this.historyurl);
   }
 }

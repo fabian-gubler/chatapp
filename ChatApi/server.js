@@ -1,91 +1,61 @@
-var express = require("express")
-var bodyParser = require("body-parser")
-var app = express()
-var port = 3000
+var express = require('express');
+var app = express();
+var port = 3000;
 
-// app.set("port", port)
-app.set('port', (process.env.PORT || port));
+app.set('port', port);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+const chat_history = [];
 
-var chatHistory = []
-var nicknames = []
-
-// Add headers
 app.use(function (req, res, next) {
-  // Website you wish to allow to connect
-  res.setHeader("Access-Control-Allow-Origin", "*")
 
-  // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
   res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-  )
+    'Access-Control-Allow-Methods',
+    'GET, POST, OPTIONS, PUT, PATCH, DELETE'
+  );
 
-  // Request headers you wish to allow
   res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  )
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
 
-  // Pass to next layer of middleware
-  next()
-})
+  next();
+});
 
-// test
-app.get("/", function (req, res, next) {
-  res.json({ message: "hsg chat-app api works..." })
-})
 
-// history
-app.get("/history", function (req, res, next) {
-  res.send(chatHistory)
-})
+app.get('/', function (req, res, next) {
+  res.json({ message: 'hsg chat-app api works...' });
+});
 
-app.post("/history", function (req, res, next) {
-  var date = new Date()
 
-  console.log(req.body)
-  chatHistory.push({
-    message: req.body.message,
-    nickname: req.body.nickname,
-    date: date,
-  })
+app.get('/history', function (req, res, next) {
+  res.send(chat_history);
+});
 
-  res.json({ message: "History created!" })
-})
+app.post('/history', function (req, res, next) {
+  const chat_message = req.body?.message;
+  const nickname = req.body?.nickname;
 
-// nicknames
-app.get("/nicknames", function (req, res, next) {
-  res.send(nicknames)
-})
-
-app.get("/nicknames/:id", function (req, res, next) {
-  for (var i = 0; nicknames.length > 0; i++) {
-      var nickname = nicknames[i];
-
-      if (nickname && nickname.id === +req.params.id) {
-          res.send({ username: nickname.username, id: nickname.id });
-      }
+  if (!chat_message || !nickname) {
+    res.status(400).send('Bad request - Wrong format?');
+    return;
   }
 
-  // const nickname = nicknames.find((e) => e.id === +req.params.id)
+  const t_stamp = new Date();
+  const msg_item = {
+    message: chat_message,
+    nickname: nickname,
+    t_stamp: t_stamp,
+  };
 
-  // if (!nickname) {
-  //   res.status(404).send("Nickname not found")
-  // }
+  chat_history.push(msg_item);
 
-  // res.status(200).send(nickname)
-})
+  res.json(msg_item);
+});
 
-app.post("/nicknames", function (req, res, next) {
-  console.log(req.body)
-  nicknames.push({ username: req.body.username, id: nicknames.length + 1 })
-
-  res.json({ username: req.body.username })
-})
-
-app.listen(app.get("port"), function () {
-  console.log("Node app is running on port", app.get("port"))
-})
+app.listen(app.get('port'), function () {
+  console.log('Node app is running on port', app.get('port'));
+});
