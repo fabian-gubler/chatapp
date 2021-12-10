@@ -15,6 +15,9 @@ export class chat_historyComponent implements OnInit{
   }
 
   public ngOnInit(): void{
+    
+    this.getHistory();
+
     setInterval(() => {
       this.getHistory();
     }, 2000);
