@@ -3,13 +3,13 @@
         <label for="history">Chatverlauf</label>
         <div class = "form control history-textcontainer">
             <ul class="messages">
-                <li class="clearfix" *ngFor="let message of chat_history">
+                <li class="clearfix" *ngFor="let message_item of chat_history">
 
                     <div class="message-data align-right">
-                        <span class="message-data-time" >{{message.t_stamp}}</span> &nbsp; &nbsp;
-                        <span class="message-data-name" >{{message.nickname}}</span>
+                        <span class="message-data-time" >{{message_item.t_stamp}}</span> &nbsp; &nbsp;
+                        <span class="message-data-name" >{{message_item.nickname}}</span>
                       </div>
-                      <div class="message my-message float-right">{{message.message}}</div>
+                      <div class="message my-message float-right">{{message_item.message}}</div>
 
                 </li>
             </ul>
