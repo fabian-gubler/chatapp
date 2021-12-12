@@ -55,6 +55,7 @@
   .textbox textarea {
     height: 50px;
     font-size: 16px;
+    margin-top: 20px;
   }
   .writeText{
     width: calc(100vw);
