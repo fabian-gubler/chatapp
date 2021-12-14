@@ -10,15 +10,17 @@ import { FooterComponent } from './footer/footer.component';
 import { MessageComponent } from './message/message.component';
 import { chat_historyComponent } from './chat_history/chat_history.component';
 import { NicknameComponent } from './nickname/nickname.component';
+import { PageloadComponent } from './pageload/pageload.component';
 
 @NgModule({
-  declarations: [					
+  declarations: [							
     AppComponent,
     HeaderComponent,
     FooterComponent,
     MessageComponent,
     chat_historyComponent,
-    NicknameComponent
+    NicknameComponent,
+    PageloadComponent,
    ],
   imports: [
     BrowserModule,

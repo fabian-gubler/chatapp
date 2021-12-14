@@ -1,0 +1,52 @@
+.wrapper{
+    animation-timing-function: cubic-bezier(.5,0,.93,.5);
+    position: absolute;
+    animation-name: pageload;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    
+    z-index: 100;
+    
+}
+.div-block {
+    width: 100vw;
+    height: 100vh;
+    background-color: #27323a;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+
+.image {
+    animation-timing-function: cubic-bezier(.5,0,.93,.5);
+    width: 500px;
+    animation-name: pageloadimg;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+
+}
+
+.body {
+    overflow: hidden;
+}
+
+@keyframes pageload {
+   
+    from {transform: translateX(0vw);}
+    to {transform: translateX(120vw);}
+  }
+  @keyframes pageloadimg {
+    from {transform: translateX(0vw);}
+    to {transform: translateX(10vw);}
+  }
