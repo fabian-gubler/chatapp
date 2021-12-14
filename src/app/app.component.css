@@ -1,17 +1,41 @@
-.align-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.fullscreen{
+    height: 100vh;
+    position: relative;
 }
-.textbar {
-    display: flex;
-    justify-content: center;
-    height: 250px;
+.content{
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+}
+.content-wrapper{
+    position: relative;
+    height: 100%;
+}
+.chat-history{
+    position: absolute;
+    top: 0;
+    bottom: 50px;
+    left: 0;
+    right: 0;
 }
 
+.inputs{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid green;
+}
+
+
+
+
 @media (max-width: 820px), (max-height: 760px){
-    .textbar {
-        display: inline-table;
-        height: 195px;
-    }   
+     
 }

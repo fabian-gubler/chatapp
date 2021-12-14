@@ -5,8 +5,10 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-delay: 2s;
-    
     z-index: 100;
+    
+    /*Asblenden für developement*/
+    display: none;
     
 }
 .div-block {

@@ -3,56 +3,51 @@
     justify-content: left;
     align-items: center;
     height: auto;
+    border: 2px solid var(--light-divider-color);
+    border-radius: 15px;
+    background-color: var(--light-bg-color);
+    padding: 3px 3px 3px 10px;
   
   }
     
   .nicknamebox {
-    border-radius: 3px;
-    padding: 0 25px 0;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-
+    justify-content: space-between;
   }
   
   .nicknamebox label {
     font-size: 28px;
     color: var(--light-text-color);
+    display: none;
   }
   
   .nicknamebox input {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 21px;
-    border: 2px solid var(--light-divider-color);
-    border-radius: 6px;
-    background-color: var(--light-bg-color);
-    padding: 7px;
-    width: 270px;
-    height: 80px;
-
+    font-size: 11px;
+    min-width: 0px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+  .nicknamebox input:focus {
+    outline: none;
   }
   
   .suc_err_msg {
+    position: absolute;
+    top: -80px;
+    background-color: var(--light-divider-color);
+    border-radius: 12px 12px 12px 12px;
+    padding: 5px;
     font-size: 10pt;
     color: var(--light-gradient-color2);
     text-align: left;
     margin-top: 20px;
   }
-
-  .nicknamebox textarea:focus {
-    border: 1px solid var(--light-highlight-color);
-    box-shadow: 0 0 5px var(--light-highlight-color);
-  }
+  .test{
+    position: relative;
+    width: 100%;
+}
   
-  @media (max-width: 820px), (max-height: 760px){
-    .nicknamebox label {
-      display: none;
-    }
-    .nicknamebox input {
-      height: 50px;
-      font-size: 16px;
-      width: calc(100vw - 50px);
-    }
-  }
+ 
 
