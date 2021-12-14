@@ -1,52 +1,49 @@
 .writeNickname{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: auto;
-    border: 2px solid var(--light-divider-color);
-    border-radius: 15px;
-    background-color: var(--light-bg-color);
-    padding: 3px 3px 3px 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 2px solid var(--light-divider-color);
+  border-radius: 15px;
+  background-color: var(--light-bg-color);
+  padding: 3px 3px 3px 10px;
+  margin: 0px 5px 0px 0px;
+}
   
-  }
-    
-  .nicknamebox {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .nicknamebox label {
-    font-size: 28px;
-    color: var(--light-text-color);
-    display: none;
-  }
-  
-  .nicknamebox input {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    min-width: 0px;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-  }
-  .nicknamebox input:focus {
-    outline: none;
-  }
-  
-  .suc_err_msg {
-    position: absolute;
-    top: -80px;
-    background-color: var(--light-divider-color);
-    border-radius: 12px 12px 12px 12px;
-    padding: 5px;
-    font-size: 10pt;
-    color: var(--light-gradient-color2);
-    text-align: left;
-    margin-top: 20px;
-  }
-  .test{
-    position: relative;
-    width: 100%;
+.nicknamebox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nicknamebox label {
+  font-size: 28px;
+  color: var(--light-text-color);
+  display: none;
+}
+
+.nicknamebox input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  background-color: transparent;
+  border: none;
+}
+.nicknamebox input:focus {
+  outline: none;
+}
+
+.suc_err_msg {
+  position: absolute;
+  top: -80px;
+  background-color: var(--light-divider-color);
+  border-radius: 12px 12px 12px 12px;
+  padding: 5px;
+  font-size: 10pt;
+  color: var(--light-gradient-color2);
+  text-align: left;
+  margin-top: 20px;
+}
+.relative{
+  position: relative;
+  width: 100%;
 }
   
  

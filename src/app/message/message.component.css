@@ -1,63 +1,58 @@
 .writeText{
-  width: 500px;
   display: flex;
   justify-content: left;
   align-items: center;
-  height: auto;
+  border: 2px solid var(--light-divider-color);
+  border-radius: 15px;
+  background-color: var(--light-bg-color);
+  padding: 3px 3px 3px 10px;
+  margin: 0px 0px 0px 5px;
+  
 }
   
 .textbox {
-  width: 100%;
-  border-radius: 3px;
-  padding: 0 25px 0;
-  
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  
 }
 
 .textbox label {
   font-size: 28px;
   color: var(--light-text-color);
+  display: none;
 }
 
 .textbox textarea {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  border: 2px solid var(--light-divider-color);
-  border-radius: 6px;
-  background-color: var(--light-bg-color);
-  padding: 7px;
-  padding-right: 70px;
-  z-index: 1;
-  height: 80px;
+  font-size: 11px;
+  background-color: transparent;
+  border: none;
+  resize: none;
+  
+  
 }
-
+.textbox textarea::-webkit-scrollbar {
+  display: none;
+}
 .textbox textarea:focus {
-  border: 1px solid var(--light-highlight-color);
-  box-shadow: 0 0 5px var(--light-highlight-color);
+  outline: none;
 }
 
 .alertError {
-	font-size: 10pt;
-	color: var(--light-error-color);
-	text-align: left;
+	position: absolute;
+  top: -80px;
+  background-color: var(--light-divider-color);
+  border-radius: 12px 12px 12px 12px;
+  padding: 5px;
+  font-size: 10pt;
+  color: var(--light-gradient-color2);
+  text-align: left;
   margin-top: 20px;
 }
-
-@media (max-width: 820px), (max-height: 760px){
-  .textbox label {
-    display: none;
-    font-size: 16px;
-    
-  }
-  .textbox textarea {
-    height: 50px;
-    font-size: 16px;
-    margin-top: 20px;
-  }
-  .writeText{
-    width: calc(100vw);
-  }
+.relative{
+  position: relative;
+  width: 100%;
 }
+
