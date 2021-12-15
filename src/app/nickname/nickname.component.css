@@ -3,10 +3,9 @@
   justify-content: left;
   align-items: center;
   border: 2px solid var(--light-divider-color);
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: var(--light-bg-color);
   padding: 3px 3px 3px 10px;
-  margin: 0px 5px 0px 0px;
 }
   
 .nicknamebox {
@@ -25,6 +24,8 @@
   font-size: 11px;
   background-color: transparent;
   border: none;
+  width: 110px;
+  max-width: 35vw;
 }
 .nicknamebox input:focus {
   outline: none;
@@ -40,6 +41,7 @@
   color: var(--light-gradient-color2);
   text-align: left;
   margin-top: 20px;
+  margin-right: 5px;
 }
 .relative{
   position: relative;

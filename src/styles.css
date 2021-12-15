@@ -21,7 +21,7 @@ body {
     --light-highlight-color: #5995DA;
     --hsg-color: #00802f;
     --white: #FFF;
-
+    --gradient: linear-gradient(45deg,var(--light-gradient-color1),var(--light-gradient-color2));;
     --m-query-width: 820px;
 }
 
@@ -64,31 +64,30 @@ label{
     color: var(--white);
 }
 .button:active{
-    background-color: var(--hsg-color);
+    background: var(--gradient);
     color: var(--white);
-    border-color: var(--hsg-color);
+    border: solid var(--gradient);
 }
+
 
 .button-round{
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: flex-end;
-    
+    font-size: 0;
     
     height: 24px;
     width: 24px;
     border-radius: 12px;
-    border: 1px solid var(--light-text-color);
-    
-    color: var(--light-text-color);
-   
-    cursor: pointer;
-    
+    border: 0.5px solid var(--light-text-color);
+    background-color: transparent;
+    cursor: pointer;  
 }
-
 .button-round svg{
     fill: var(--light-text-color);
+    height: 12px;
+    width: 12px;
 }
 .button-round:hover{
     background-color: var(--light-text-color);
@@ -96,69 +95,11 @@ label{
 .button-round:hover svg{
     fill: var(--white);
 }
-
-
 .button-round:active{
-    background-color: var(--hsg-color);
+    background: var(--gradient);
     color: var(--white);
-    border-color: var(--hsg-color);
+    border-color: var(--gradient);
 }
 .button-round:hover svg{
-    fill: var(--white);
-}
-
-.button-round{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: flex-end;
-    
-    
-    height: 24px;
-    width: 24px;
-    border-radius: 12px;
-    border: 1px solid var(--light-text-color);
-    
-    color: var(--light-text-color);
-   
-    cursor: pointer;
-    
-}
-
-.test   {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: flex-end;
-    
-    
-    height: 24px;
-    width: 24px;
-    border-radius: 12px;
-    border: 1px solid var(--light-text-color);
-    
-    color: var(--light-text-color);
-   
-    cursor: pointer;
-    
-}
-.test svg{
-    fill: var(--light-text-color);
-
-}
-.test:hover{
-    background-color: var(--light-text-color);
-}
-.button-round:hover svg{
-    fill: var(--white);
-}
-
-
-.test:active{
-    background-color: var(--hsg-color);
-    color: var(--white);
-    border-color: var(--hsg-color);
-}
-.test:hover svg{
     fill: var(--white);
 }
