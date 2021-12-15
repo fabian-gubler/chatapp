@@ -8,11 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  public chat_history: Array<any> = [];
-
-  public onSubmitMessage(msg_item: object):void {
-    this.chat_history.push(msg_item)
-
-  }
-
 }
