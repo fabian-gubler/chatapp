@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
-import { Component, Output, EventEmitter } from '@angular/core';
-import { NicknameComponent } from '../nickname/nickname.component';
-=======
 import { Component, OnInit} from '@angular/core';
->>>>>>> e341bde5376edda52db2dc556ec480477bde30d8
 import { Person } from '../shared/models/person';
 import { ChatMessage } from '../shared/models/chatmessage';
 import { ChatService } from '../shared/services/chat.service';
@@ -41,57 +35,6 @@ export class MessageComponent implements OnInit{
 				break;
 
 			default:
-<<<<<<< HEAD
-				this.errorMessage = ''
-
-				// Message to be send as Post request to the server
-	  			const url = 'http://localhost:3000/history';
-	  			const options = {
-						method: 'POST',
-						headers: {
-							'Accept': 'application/json',
-		  					'Content-Type': 'application/json;charset=UTF-8'
-						},
-						body: JSON.stringify({
-		  				message: message,
-						nickname: Person.Nickname
-						})
-	  				};
-	  
-	  			fetch(url, options)
-						.then(response => {
-		  				console.log(response.status);
-						});
-
-				// Chat Output
-				setInterval(function get_histoy(){
-				const history_url = 'http://localhost:3000/history';
-	  			const history_options = {
-						method: 'GET',
-						headers: {
-		  					'Content-Type': 'application/json;charset=UTF-8'
-						},
-	  				};
-	  
-	  			fetch(history_url, history_options)
-						.then(response => {
-		  				console.log(response.status);
-						});
-				},1000)
-
-
-				//const msg_item = {
-				//	name: Person.Nickname,
-				//	msg: message,
-				//	t_stamp: new Date().toLocaleDateString('de')
-				//}
-				
-				//this.submitMessage.emit(msg_item);
-
-				//this.chatMessage = '';
-				
-				return
-=======
 				//create Message Item
 				const msg_item: ChatMessage = {
 					message: message,
@@ -107,7 +50,6 @@ export class MessageComponent implements OnInit{
 						this.errorMessage = error;
 					}
 				);
->>>>>>> e341bde5376edda52db2dc556ec480477bde30d8
 			}
 
 		};
