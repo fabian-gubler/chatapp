@@ -23,14 +23,15 @@ export class MessageComponent implements OnInit{
   	public post_message(message: string): void {
 
 		switch(true) {
-			// No Nickname
-			case !Person.Nickname:
-				this.errorMessage = 'Bitte erstelle einen Nickname bevor du eine Nachricht schreibst';
-				break;
-
 			// No Message
 			case !message.trim():
 				this.errorMessage = 'Du kannst keine leeren Nachrichten abschicken';
+				this.chatMessage = '';
+				break;
+			
+			// No Nickname
+			case !Person.Nickname:
+				this.errorMessage = 'Bitte erstelle einen Nickname bevor du eine Nachricht schreibst';
 				break;
 
 			default:
