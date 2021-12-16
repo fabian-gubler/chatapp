@@ -1,12 +1,39 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ChatMessage } from '../shared/models/chatmessage';
+import { ChatService } from '../shared/services/chat.service';
 
 @Component({
   selector: 'app-chat_history',
   templateUrl: './chat_history.component.html',
   styleUrls: ['./chat_history.component.css']
 })
-export class Chat_historyComponent {
+export class chat_historyComponent implements OnInit{
 
-  @Input() public chat_history: Array<any> = [];
+  public chat_history: ChatMessage[] = [];
+
+  constructor(private chatService: ChatService) {
+  }
+
+  public ngOnInit(): void{
+    
+    this.getHistory();
+
+    setInterval(() => {
+      this.getHistory();
+    }, 2000);
+
+  }
+
+  private getHistory(): void {
+    this.chatService.getHistory().subscribe(
+      (response: ChatMessage[]) => {
+        this.chat_history = response;
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
+
+  }
 
 }
