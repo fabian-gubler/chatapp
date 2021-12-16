@@ -22,7 +22,7 @@ body {
     --hsg-color: #00802f;
     --white: #FFF;
     --gradient: linear-gradient(45deg,var(--light-gradient-color1),var(--light-gradient-color2));;
-    --m-query-width: 820px;
+    --m-query-width: (max-width: 480px);
 }
 
 p {

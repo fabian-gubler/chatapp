@@ -1,6 +1,6 @@
 .writeText{
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
   border: 2px solid var(--light-divider-color);
   border-radius: 20px;
@@ -47,11 +47,26 @@
   font-size: 10pt;
   color: var(--light-gradient-color2);
   text-align: left;
-  margin-top: 20px;
-  margin-left: 5px;
+  left: 5px;
 }
 .relative{
   position: relative;
   width: 100%;
 }
 
+@media screen and (max-width: 480px){
+  .writeText{
+    width: calc(100vw - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .textbox textarea { 
+    width: calc(100vw - 80px);
+    max-width: none;
+  }
+  .alertError {
+    top: -142px;
+    left: 0;
+    margin: 0 10px 0 10px;
+  }
+}
