@@ -1,4 +1,4 @@
-<div class="relative"><div class='alertError' [hidden]='chatMessage' [innerHTML]='errorMessage'>test</div></div>
+<div class="relative"><div class="alertError" *ngIf="errorMessage">{{errorMessage}}</div></div>
 <div class="writeText">
 	<div class="textbox">
 		<label for="message">Nachricht</label>

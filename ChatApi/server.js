@@ -7,6 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const chat_history = [];
+const nicknames = [];
 
 app.use(function (req, res, next) {
 
@@ -31,6 +32,25 @@ app.get('/', function (req, res, next) {
 });
 
 
+app.post('/nicknames', function (req, res, next) {
+  const nickname = req.body?.nickname;
+  var exists_flag = false;
+
+  if (nicknames.includes(nickname)) {
+    exists_flag = true;     
+  } else {
+    nicknames.push(nickname)
+  }
+
+  const nick_item = {
+    nickname: nickname,
+    exists: exists_flag,
+  }
+
+  res.json(nick_item)
+
+})
+
 app.get('/history', function (req, res, next) {
   res.send(chat_history);
 });
@@ -53,7 +73,7 @@ app.post('/history', function (req, res, next) {
 
   chat_history.push(msg_item);
 
-  res.json(msg_item);
+  res.status(201).json(msg_item);
 });
 
 app.listen(app.get('port'), function () {
