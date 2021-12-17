@@ -2,22 +2,25 @@
     <div class = history-outercontainer>
         <div class = "form control history-textcontainer">
             <ul class="messages">
-                <li class="clearfix" *ngFor="let message_item of chat_history">
-                    
+								<li class="clearfix" *ngFor="let message_item of chat_history">
                     <div *ngIf="active_nick_check(message_item.nickname);else elseBlock">
+										<div class="message-container-right">
+                        <div class="message my-message align-right">{{message_item.message}}</div>
                         <div class="message-data align-right">
                         <span class="message-data-name" >{{message_item.nickname}}</span>
                         <span class="message-data-time" >{{message_item.t_stamp}}</span> &nbsp; &nbsp;
                             </div>
-                        <div class="message my-message float-right">{{message_item.message}}</div>
+											</div>
                     </div>
 
                     <ng-template #elseBlock >
-                        <div class="message-data align-left">
-                        <span class="message-data-name" >{{message_item.nickname}}</span>
-                        <span class="message-data-time" >{{message_item.t_stamp}}</span> &nbsp; &nbsp;
-                        </div>
-                    <div class="message other-message float-left">{{message_item.message}}</div>
+										<div class="message-container-left">
+											<div class="message other-message float-left">{{message_item.message}}</div>
+											<div class="message-data align-left">
+												<span class="message-data-name" >{{message_item.nickname}} - </span>
+												<span class="message-data-time" >{{message_item.t_stamp}}</span> &nbsp; &nbsp;
+												</div>
+										</div>
                     </ng-template>
                 </li>
             </ul>
