@@ -21,7 +21,6 @@
     margin-bottom: 10px;
     padding: 7px;
 
-    background: white;
   
     max-height: none;
   	overflow-x: none;
@@ -45,6 +44,7 @@
   }
 
   .messages {
+	padding: 0;
     list-style: none;
   }
   
@@ -60,18 +60,21 @@
     font-size: 16px;
   }
   
+  .message-data-name {
+	font-weight: bold;
+  }
+
   .message-data-time {
-    color: lighten(#92959E, 8%);
-    padding-left: 6px;
+	color: rgba(39, 50, 58, 0.6);;
+    padding-left: 10px;
   }
   
   .message {      
-    color: white;
-    padding: 18px 20px;
+	border: 1px solid rgba(39, 50, 58, 0.1);
+    padding: 5px 5px; 
     line-height: 26px;
     font-size: 16px;
-    border-radius: 7px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     width: flex;
     max-width: 600px;
     word-wrap: break-word;
@@ -94,13 +97,17 @@
   
   
   .my-message {
-    background: #86BB71;
+	color: var(--light-bg-color);
+    border-radius: 5px 5px 0 5px;
+    background: #3AD59F;
     text-align: left;
     float: right; 
   }
   
   .other-message {
-    background: #94C2ED;
+	color: var(--light-text-color);
+    border-radius: 5px 5px 5px 0;
+    background: #F7F7F7;
     text-align: left;
     float: left;
   }
