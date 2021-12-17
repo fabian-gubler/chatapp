@@ -21,8 +21,7 @@
     margin-bottom: 10px;
     padding: 7px;
 
-    background: var(--gradient);
-    filter: opacity(0.1);
+    background: white;
   
     max-height: none;
   	overflow-x: none;

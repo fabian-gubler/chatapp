@@ -25,12 +25,20 @@ export class chat_historyComponent implements OnInit{
 
   }
 
+  public active_nick_check(nickname: string): boolean {
+    if (!Person.Nickname) {
+      return false;
+    }
+
+    return Person.Nickname === nickname;
+
+  }
+
   private getHistory(): void {
     this.chatService.getHistory().subscribe(
       (response: ChatMessage[]) => {
         this.chat_history = response;
-        this.chat_history.map((obj:any) => {obj.nickname == Person.Nickname? obj.loggedin = true: obj.loggedin = false})
-        console.log(this.chat_history);
+
       },
       (error: any) => {
         console.log(error);

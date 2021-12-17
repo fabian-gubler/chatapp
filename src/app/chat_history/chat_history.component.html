@@ -4,20 +4,22 @@
         <div class = "form control history-textcontainer">
             <ul class="messages">
                 <li class="clearfix" *ngFor="let message_item of chat_history">
-                    <div *ngIf = "message_item.loggedin; else elseBlock"></div>
-                    <div class="message-data align-right">
+                    
+                    <div *ngIf="active_nick_check(message_item.nickname);else elseBlock">
+                        <div class="message-data align-right">
                         <span class="message-data-time" >{{message_item.t_stamp}}</span> &nbsp; &nbsp;
                         <span class="message-data-name" >{{message_item.nickname}}</span>
-                      </div>
-                      <div class="message my-message float-right">{{message_item.message}}</div>
-                      <ng-template #elseBlock>
+                            </div>
+                        <div class="message my-message float-right">{{message_item.message}}</div>
+                    </div>
+
+                    <ng-template #elseBlock >
                         <div class="message-data align-left">
                         <span class="message-data-time" >{{message_item.t_stamp}}</span> &nbsp; &nbsp;
                         <span class="message-data-name" >{{message_item.nickname}}</span>
-                      </div>
-                      <div class="message other-message float-right">{{message_item.message}}</div>
-                      </ng-template>
-
+                        </div>
+                    <div class="message other-message float-left">{{message_item.message}}</div>
+                    </ng-template>
                 </li>
             </ul>
 
