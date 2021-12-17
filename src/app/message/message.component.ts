@@ -19,7 +19,6 @@ export class MessageComponent implements OnInit{
 
 	public ngOnInit(): void {}
 
-
   	public post_message(message: string): void {
 
 		switch(true) {

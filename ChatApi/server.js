@@ -64,7 +64,8 @@ app.post('/history', function (req, res, next) {
     return;
   }
 
-  const t_stamp = new Date();
+	const t_options = {hour: "numeric", minute: "numeric"}
+  const t_stamp = new Date().toLocaleString('de-DE', t_options);
   const msg_item = {
     message: chat_message,
     nickname: nickname,
