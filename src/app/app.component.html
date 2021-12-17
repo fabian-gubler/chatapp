@@ -1,9 +1,23 @@
-<app-header></app-header>
-<app-chat_history [history]='messageHistory'></app-chat_history>
-<div class="align-center">
-<div class="textbar">
-<app-nickname (submitNickname) = 'onSubmitNickname($event)'></app-nickname>
-<app-message [nickname]='nickname' (submitMessage) = "onSubmitMessage($event)"></app-message>
+<div class="fullscreen">
+    <app-pageload></app-pageload>
+    <app-header></app-header>
+    <div class="center">
+        <div class="max-width">
+            <div class="content-relative">
+        <div class="content">
+            <div class="content-wrapper">
+                <div class="chat-history">
+                    <app-chat_history></app-chat_history>
+                </div>
+                <div class="inputs">
+                    <app-nickname></app-nickname>
+                <div class="spacer"></div>
+                    <app-message></app-message>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+    <app-footer></app-footer>
 </div>
-</div>
-<app-footer></app-footer>

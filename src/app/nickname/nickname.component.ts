@@ -1,48 +1,60 @@
 import { Component, Output, OnInit, EventEmitter } from '@angular/core';
+import { Person } from '../shared/models/person';
+import { NicknameService } from '../shared/services/nickname.service';
 
 @Component({
   selector: 'app-nickname',
   templateUrl: './nickname.component.html',
   styleUrls: ['./nickname.component.css']
 })
-export class NicknameComponent implements OnInit {
+export class NicknameComponent implements OnInit{
 
-  @Output() public submitNickname = new EventEmitter<string>();
+	public init_nickname = ''
+	public exit_msg = '';
 
-  public init_nickname = ''
-  public savemsg = ''
-	public errorMessage = ''
+	constructor(private _nicknameService: NicknameService) {}
 
-  public save_nickname(nickname: string): void {
+	public ngOnInit(): void {}
 
+	public save_nickname(nickname: string): void {
+    
 		// Empty Nickname
 		if (!nickname) {
-			this.errorMessage = 'Bitte erstelle Einen Nicknamen';
+			this.exit_msg = 'Bitte erstelle Einen Nickname';
 			return
 		}
 		// Check whether multiple words
 		if (nickname.includes(' ')) {
-			this.errorMessage = 'Dein Nickname soll keine Leerzeichen beinhalten';
-      return
+			this.exit_msg = 'Dein Nickname darf keine Leerzeichen beinhalten';
+			return
 		}
 
 		// Maximum character length
 		if (nickname.length > 15) {
-			this.errorMessage = 'Dein Nickname darf maximal 15 Zeichen haben';
+			this.exit_msg = 'Dein Nickname darf maximal 15 Zeichen haben';
 		}
 
-		// Submit Nickname
-    this.submitNickname.emit(nickname);
+		const nick_item = {
+			nickname: nickname
+		}
 
-    this.savemsg = 'Nickname: ' + nickname + ' gespeichert'
+		this._nicknameService.register_nickname(nick_item).subscribe(
+			(response: any) => {
+				if (response.exists === true) {
+					this.exit_msg = "Nickname " + response.nickname + " ist bereits vergeben"
+				} else {
+					Person.Nickname = nickname;
+					this.exit_msg = "Nickname " + response.nickname + " erstellt"
+				}
+			},
+			
+			(error: any) => {
+				this.exit_msg = error
+			}
+
+		)
 
     return
 
   }
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

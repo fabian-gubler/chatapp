@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { chat_historyComponent } from './chat_history.component';
+import { PageloadComponent } from './pageload.component';
 
-describe('Chat_historyComponent', () => {
-  let component: chat_historyComponent;
-  let fixture: ComponentFixture<chat_historyComponent>;
+describe('PageloadComponent', () => {
+  let component: PageloadComponent;
+  let fixture: ComponentFixture<PageloadComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ chat_historyComponent ]
+      declarations: [ PageloadComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(chat_historyComponent);
+    fixture = TestBed.createComponent(PageloadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

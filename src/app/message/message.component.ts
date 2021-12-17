@@ -1,5 +1,7 @@
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
-import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Person } from '../shared/models/person';
+import { ChatMessage } from '../shared/models/chatmessage';
+import { ChatService } from '../shared/services/chat.service';
 
 @Component({
   selector: 'app-message',
@@ -7,49 +9,49 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
   styleUrls: ['./message.component.css']
 })
 
-export class MessageComponent {
+export class MessageComponent implements OnInit{
 
-  @Input() public nickname = '';
-
-  @Output() public submitMessage = new EventEmitter<string>();
-
-  public chatMessage = '';
+	public chatMessage = '';
 	public errorMessage = '';
-	public validMessage = true;
+
+	constructor(private _chatService: ChatService) {
+	}
+
+	public ngOnInit(): void {}
 
 
-  public post_message(message: string, nickname: string): void {
+  	public post_message(message: string): void {
 
 		switch(true) {
-			// No Nickname
-			case !nickname:
-				this.errorMessage = 'Bitte erstelle einen Nickname bevor du eine Nachricht schreibst';
-				break;
-
 			// No Message
 			case !message.trim():
 				this.errorMessage = 'Du kannst keine leeren Nachrichten abschicken';
+				this.chatMessage = '';
+				break;
+			
+			// No Nickname
+			case !Person.Nickname:
+				this.errorMessage = 'Bitte erstelle einen Nickname bevor du eine Nachricht schreibst';
 				break;
 
-			// Needed to check validity
 			default:
-				this.errorMessage = ''
-		}
+				//create Message Item
+				const msg_item: ChatMessage = {
+					message: message,
+					nickname: Person.Nickname,
+				};
 
-		// Chat Output
-    const timestamp: string = new Date().toLocaleString('de');
-    const finalmessage = `${nickname} <br> ${message} --- ${timestamp} <br>`;
+				this._chatService.addMessage(msg_item).subscribe(
+					(response: ChatMessage) => {
+						this.chatMessage = '';
+					},
 
-		// Push only if valid
-		if (this.errorMessage == '') {
-			console.log("sucess")
-			this.submitMessage.emit(finalmessage);
-		}
+					(error: any) => {
+						this.errorMessage = error;
+					}
+				);
+			}
 
-		// Initialize variable
-    this.chatMessage = '';
-
-    return
-  }
+		};
 
 }

@@ -1,7 +1,13 @@
 .footer {
-    width: 100%;
-    height: 100px;
-    background-color: var(--hsg-color);
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-text-color);
     display: flex;
     align-items: center;
 }
@@ -20,11 +26,4 @@
 }
 p{
     color: var(--light-bg-color);
-}
-
-
-@media (max-width: 820px), (max-height: 760px){
-    .footer {
-        height: 50px;        
-    }
 }
