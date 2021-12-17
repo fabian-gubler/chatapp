@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatMessage } from '../shared/models/chatmessage';
+import { Person } from '../shared/models/person';
 import { ChatService } from '../shared/services/chat.service';
 
 @Component({
@@ -24,10 +25,20 @@ export class chat_historyComponent implements OnInit{
 
   }
 
+  public active_nick_check(nickname: string): boolean {
+    if (!Person.Nickname) {
+      return false;
+    }
+
+    return Person.Nickname === nickname;
+
+  }
+
   private getHistory(): void {
     this.chatService.getHistory().subscribe(
       (response: ChatMessage[]) => {
         this.chat_history = response;
+
       },
       (error: any) => {
         console.log(error);
@@ -35,5 +46,6 @@ export class chat_historyComponent implements OnInit{
     );
 
   }
-
 }
+
+

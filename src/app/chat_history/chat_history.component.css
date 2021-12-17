@@ -21,8 +21,7 @@
     margin-bottom: 10px;
     padding: 7px;
 
-    background: var(--gradient);
-    filter: opacity(0.1);
+    background: white;
   
     max-height: none;
   	overflow-x: none;
@@ -97,11 +96,13 @@
   .my-message {
     background: #86BB71;
     text-align: left;
+    float: right; 
   }
   
   .other-message {
     background: #94C2ED;
     text-align: left;
+    float: left;
   }
   
   other-message::after {
