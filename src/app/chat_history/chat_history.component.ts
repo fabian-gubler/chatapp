@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatMessage } from '../shared/models/chatmessage';
+import { Person } from '../shared/models/person';
 import { ChatService } from '../shared/services/chat.service';
 
 @Component({
@@ -28,6 +29,8 @@ export class chat_historyComponent implements OnInit{
     this.chatService.getHistory().subscribe(
       (response: ChatMessage[]) => {
         this.chat_history = response;
+        this.chat_history.map((obj:any) => {obj.nickname == Person.Nickname? obj.loggedin = true: obj.loggedin = false})
+        console.log(this.chat_history);
       },
       (error: any) => {
         console.log(error);
@@ -35,5 +38,6 @@ export class chat_historyComponent implements OnInit{
     );
 
   }
-
 }
+
+

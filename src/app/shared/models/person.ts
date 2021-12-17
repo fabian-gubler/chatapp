@@ -9,5 +9,4 @@ export class Person {
     public static set Nickname(value: string) {
         this._nickname = value;
     }
-
 }
