@@ -10,6 +10,7 @@
 }
   
 .textbox {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -28,7 +29,6 @@
   resize: none;
   width: 500px;
   max-width: 35vw;
-  
   
 }
 .textbox textarea::-webkit-scrollbar {
