@@ -3,7 +3,7 @@
 	<div class="textbox">
 		<label for="message">Nachricht</label>
 		
-		<textarea autosize id="message" rows="1" placeholder="Nachricht..." [(ngModel)]="chatMessage" (keyup.enter)="post_message(chatMessage)"></textarea>
+		<textarea autosize [maxRows]="5" id="message" rows="1" placeholder="Nachricht..." [(ngModel)]="chatMessage" (keyup.enter)="post_message(chatMessage)"></textarea>
 	
 	</div>
 	<button class="button-round" (click)="post_message(chatMessage)" [disabled]="!chatMessage">
