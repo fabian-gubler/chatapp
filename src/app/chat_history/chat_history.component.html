@@ -1,6 +1,6 @@
 <div class = writeHistory>
     <div class = history-outercontainer>
-        <div class = "form control history-textcontainer">
+        <div #scrollMe class = "form control history-textcontainer">
             <ul class="messages">
 								<li class="clearfix" *ngFor="let message_item of chat_history">
                     <div *ngIf="active_nick_check(message_item.nickname);else elseBlock">
