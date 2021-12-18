@@ -43,6 +43,7 @@ export class MessageComponent implements OnInit{
 				this._chatService.addMessage(msg_item).subscribe(
 					(response: ChatMessage) => {
 						this.chatMessage = '';
+						this.errorMessage = '';
 					},
 
 					(error: any) => {
