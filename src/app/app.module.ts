@@ -11,6 +11,7 @@ import { MessageComponent } from './message/message.component';
 import { chat_historyComponent } from './chat_history/chat_history.component';
 import { NicknameComponent } from './nickname/nickname.component';
 import { PageloadComponent } from './pageload/pageload.component';
+import {AutosizeModule} from '@techiediaries/ngx-textarea-autosize';
 
 @NgModule({
   declarations: [							
@@ -24,6 +25,7 @@ import { PageloadComponent } from './pageload/pageload.component';
    ],
   imports: [
     BrowserModule,
+		AutosizeModule,
     NgbModule,
     FormsModule,
     HttpClientModule
