@@ -4,13 +4,15 @@
             <ul class="messages">
 								<li class="clearfix" *ngFor="let message_item of chat_history">
                     <div *ngIf="active_nick_check(message_item.nickname);else elseBlock">
-										<div class="message-container-right">
-                        <div class="message my-message align-right">{{message_item.message}}</div>
-                        <div class="message-data align-right">
-                        <span class="message-data-name" >{{message_item.nickname}} - </span>
-                        <span class="message-data-time" >{{message_item.t_stamp}}</span> &nbsp; &nbsp;
+                        <div class="message-container-right">
+                            <div class="message my-message align-right">{{message_item.message}}</div>
+                            <div class="message-data align-right">
+                                <div class="margin-correction">
+                                    <span class="message-data-name" >{{message_item.nickname}} - </span>
+                                    <span class="message-data-time" >{{message_item.t_stamp}}</span> &nbsp; &nbsp;
+                                </div>
                             </div>
-											</div>
+                        </div>
                     </div>
 
                     <ng-template #elseBlock >
