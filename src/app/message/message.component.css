@@ -54,3 +54,19 @@
   position: relative;
   width: 100%;
 }
+@media screen and (max-width: 480px){
+  .writeText{
+    width: calc(100vw - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .textbox textarea { 
+    width: calc(100vw - 80px);
+    max-width: none;
+  }
+  .alertError {
+    top: -142px;
+    left: 0;
+    margin: 0 10px 0 10px;
+  }
+}
