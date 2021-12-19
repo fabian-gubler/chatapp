@@ -61,3 +61,18 @@
 .spacer{
     width: 10px;
 }
+@media screen and (max-width: 480px) {
+    .spacer {
+        width: 0px;
+        height: 10px;
+    }
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        width: 100vw;
+    }
+    .chat-history{
+        bottom: 100px;
+    }
+}
