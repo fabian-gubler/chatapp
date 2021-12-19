@@ -61,6 +61,7 @@
     width: calc(100vw - 20px);
     margin-left: 10px;
     margin-right: 10px;
+    justify-content: space-between;
   }
   .textbox textarea { 
     width: calc(100vw - 80px);
