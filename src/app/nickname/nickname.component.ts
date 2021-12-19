@@ -30,8 +30,8 @@ export class NicknameComponent implements OnInit{
 		}
 
 		// Maximum character length
-		if (nickname.length > 15) {
-			this.exit_msg = 'Dein Nickname darf maximal 15 Zeichen haben';
+		if (nickname.length > 8) {
+			this.exit_msg = 'Dein Nickname darf maximal 8 Zeichen haben';
 		}
 
 		const nick_item = {
@@ -41,10 +41,10 @@ export class NicknameComponent implements OnInit{
 		this._nicknameService.register_nickname(nick_item).subscribe(
 			(response: any) => {
 				if (response.exists === true) {
-					this.exit_msg = "Nickname " + response.nickname + " ist bereits vergeben"
+					this.exit_msg = "Dieser Nickname ist bereits vergeben"
 				} else {
 					Person.Nickname = nickname;
-					this.exit_msg = "Nickname " + response.nickname + " erstellt"
+					this.exit_msg = "Du schreibst jetzt als " + response.nickname
 				}
 			},
 			

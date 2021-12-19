@@ -2,7 +2,7 @@
 <div class="writeNickname">
   <div class="nicknamebox">
     <label for="Nickname">Benutzername</label>
-    <input type="text" placeholder="Dein Benutzername" maxlength="15" [(ngModel)]="init_nickname" (keyup.enter)=save_nickname(init_nickname)>
+    <input type="text" placeholder="Dein Benutzername" maxlength="8" [(ngModel)]="init_nickname" (keyup.enter)=save_nickname(init_nickname)>
   </div>
   <button class= 'button-round' type= 'submit' (click)="save_nickname(init_nickname) "><svg version="1.1" id="save_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 463 463" style="enable-background:new 0 0 463 463;" xml:space="preserve">
     <g>
