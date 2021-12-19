@@ -26,8 +26,8 @@
 }
 .content{
     position: absolute;
-    top: 50px;
-    bottom: 50px;
+    top: 70px;
+    bottom: 70px;
     left: 0;
     right: 0;
     width: 100%;
@@ -41,7 +41,7 @@
 .chat-history{
     position: absolute;
     top: 0;
-    bottom: 50px;
+    bottom: 40px;
     left: 0;
     right: 0;
     width: 100%;
