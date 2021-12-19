@@ -34,14 +34,28 @@
 .suc_err_msg {
   position: absolute;
   top: -80px;
-  background-color: var(--light-divider-color);
+  background-color: var(--light-info-color);
   border-radius: 12px 12px 12px 12px;
   padding: 5px;
   font-size: 10pt;
-  color: var(--light-gradient-color2);
+  color: var(--light-text-color);
   text-align: left;
   margin-top: 20px;
-  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.alertError {
+	position: absolute;
+  top: -80px;
+  background-color: var(--light-info-color);
+  border-radius: 12px 12px 12px 12px;
+  padding: 5px;
+  font-size: 10pt;
+  color: var(--light-text-color);
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 5px;
+
 }
 .relative{
   position: relative;

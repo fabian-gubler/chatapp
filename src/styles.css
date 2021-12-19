@@ -17,6 +17,7 @@ body {
     --light-divider-color: rgba(39, 50, 58, 0.2);
     --light-gradient-color1: #90E857;
     --light-gradient-color2: #3AD59F;
+    --light-info-color: rgba(58, 213, 159, 0.3);
     --light-error-color: #FF7878;
     --light-highlight-color: #5995DA;
     --hsg-color: #00802f;

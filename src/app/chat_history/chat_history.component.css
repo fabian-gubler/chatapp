@@ -123,7 +123,10 @@
     background: #3AD59F;
 	  justify-content: flex-end;
     text-align: left;
+    word-wrap: break-word;
+    max-width: calc(100vw - 50px);
   }
+  
   
   .other-message {
 	color: var(--light-text-color);
@@ -131,6 +134,9 @@
     background: #F7F7F7;
 
     text-align: left;
+    
+    word-wrap: break-word;
+    max-width: calc(100vw - 50px);
   }
   
   other-message::after {

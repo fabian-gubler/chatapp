@@ -41,14 +41,16 @@
 .alertError {
 	position: absolute;
   top: -80px;
-  background-color: var(--light-divider-color);
+  background-color: var(--light-info-color);
   border-radius: 12px 12px 12px 12px;
   padding: 5px;
   font-size: 10pt;
-  color: var(--light-gradient-color2);
+  color: var(--light-text-color);
   text-align: left;
   margin-top: 20px;
   margin-left: 5px;
+  
+  backdrop-filter: blur(3px);
 }
 .relative{
   position: relative;
