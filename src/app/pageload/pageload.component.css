@@ -30,6 +30,7 @@
 .image {
     animation-timing-function: cubic-bezier(.5,0,.93,.5);
     width: 500px;
+    max-width: 80vw;
     animation-name: pageloadimg;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -44,9 +45,9 @@
 @keyframes pageload {
    
     from {transform: translateY(0vw);}
-    to {transform: translateY(-120vw);}
+    to {transform: translateY(-120vh);}
   }
   @keyframes pageloadimg {
     from {transform: translateY(0vw);}
-    to {transform: translateY(-10vw);}
+    to {transform: translateY(-10vh);}
   }
