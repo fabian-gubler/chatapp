@@ -47,6 +47,24 @@
   position: relative;
   width: 100%;
 }
-  
+@media screen and (max-width: 480px) {
+  .nicknamebox input {
+    width: 100%;
+    max-width: 100%;
+  }
+  .writeNickname{
+    width: calc(100vw - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .nicknamebox input {
+    width: calc(100vw - 80px);
+  }
+  .suc_err_msg {
+    top: -42px;
+    left: 0;
+    margin: 0 10px 0 10px;
+  }
+}
  
 
