@@ -50,7 +50,8 @@
   margin-top: 20px;
   margin-left: 5px;
   
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(2px) brightness(120%);
+  -webkit-backdrop-filter: blur(2px) brightness(120%);
 }
 .relative{
   position: relative;
