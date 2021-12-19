@@ -2,13 +2,11 @@
     animation-timing-function: cubic-bezier(.5,0,.93,.5);
     position: absolute;
     animation-name: pageload;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-delay: 2s;
     z-index: 100;
     
-    /*Asblenden für developement*/
-    display: none;
     
 }
 .div-block {
@@ -45,10 +43,10 @@
 
 @keyframes pageload {
    
-    from {transform: translateX(0vw);}
-    to {transform: translateX(120vw);}
+    from {transform: translateY(0vw);}
+    to {transform: translateY(-120vw);}
   }
   @keyframes pageloadimg {
-    from {transform: translateX(0vw);}
-    to {transform: translateX(10vw);}
+    from {transform: translateY(0vw);}
+    to {transform: translateY(-10vw);}
   }
