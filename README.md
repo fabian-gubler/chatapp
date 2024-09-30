@@ -1,13 +1,13 @@
-# HSG CHAT-APP – Full-Stack Chat Application
+# HSG Chat App – Full-Stack Chat Application
 
 ### :books: **Chat Applikation Live Preview**:  
-**[HSG CHAT-APP](http://hsgchat.azurewebsites.net/)** – Click the link to view the Chat Application.
+**[HSG Chat App](http://hsgchat.azurewebsites.net/)** – Click the link to view the Chat Application.
 
 ---
 
 ## Overview
 
-Unichat is a full-stack chat application developed as part of a web app course at the University of St. Gallen. Built using Angular for the frontend and Express for the backend, this project emphasized agile methodologies, particularly Scrum, to manage the development process in a team-based setting. Unichat supports real-time messaging, providing users with a smooth and interactive communication platform.
+HSG Chat App is a full-stack chat application developed as part of a web app course at the University of St. Gallen. Built using Angular for the frontend and Express for the backend, this project emphasized agile methodologies, particularly Scrum, to manage the development process in a team-based setting. This Chat application supports real-time messaging, providing users with a smooth and interactive communication platform.
 
 ## Key Features
 
@@ -41,7 +41,7 @@ Unichat is a full-stack chat application developed as part of a web app course a
    ```
 2. Navigate to the project directory and install the dependencies for both frontend and backend:
    ```bash
-   cd unichat
+   cd chatapp
    npm install
    ```
 
