@@ -1,7 +1,7 @@
-# Unichat – Full-Stack Chat Application
+# HSG CHAT-APP – Full-Stack Chat Application
 
 ### :books: **Chat Applikation Live Preview**:  
-**[HSG Chat-APP](http://hsgchat.azurewebsites.net/)** – Click the link to view the Chat Application.
+**[HSG CHAT-APP](http://hsgchat.azurewebsites.net/)** – Click the link to view the Chat Application.
 
 ---
 
