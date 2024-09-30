@@ -1,16 +1,51 @@
-# Unichat
+# Unichat – Full-Stack Chat Application
 
-#### [Project Reference Preview ](http://hsgchat.azurewebsites.net/)
+### :books: **Chat Applikation Live Preview**:  
+**[HSG Chat-APP](http://hsgchat.azurewebsites.net/)** – Click the link to view the Chat Application.
 
-## Project Description
-Unichat is a full-stack chat application developed by students as part of a web app course at the University of St. Gallen. Built using Angular as a framework, this simple chat platform was developed in a scrum setting, emphasizing agile project management methodologies. The app features real-time messaging, providing users with a seamless and intuitive communication experience.
+---
 
-## Newly Acquired Skills and Tools Utilized in Developing Unichat
-During the development of Unichat, the team utilized a range of tools and technologies, including:
+## Overview
 
-- Angular for the frontend
-- Express for the backend
-- Figma for creating the design
-- SCSS for implementing the design
-    
-To facilitate agile project management, the team utilized an online scrumboard, which enabled testing of user requirements provided by clients. These tools and technologies were critical in enabling the team to create a robust and effective chat application that met the needs of its users.
+Unichat is a full-stack chat application developed as part of a web app course at the University of St. Gallen. Built using Angular for the frontend and Express for the backend, this project emphasized agile methodologies, particularly Scrum, to manage the development process in a team-based setting. Unichat supports real-time messaging, providing users with a smooth and interactive communication platform.
+
+## Key Features
+
+- **Real-time messaging**: Users can send and receive messages instantly.
+- **User-friendly interface**: Developed using Angular with SCSS for seamless user experience and design.
+- **Backend with Express**: A robust backend built using Express to handle requests efficiently.
+- **Agile Development**: Managed using Scrum and Kanban, allowing continuous integration and rapid iteration.
+- **Prototyping and Design**: Wireframing and design done in Figma, ensuring that user feedback was incorporated at every stage.
+
+## Technologies Used
+
+- **Frontend**: Angular, SCSS
+- **Backend**: Node.js, Express
+- **Design**: Figma
+- **Testing**: Karma
+- **Agile Practices**: Scrum, Kanban
+- **API Integration**: RESTful APIs
+
+## Installation & Usage
+
+### Prerequisites
+
+- Node.js and npm installed.
+- Basic knowledge of Angular and Express.js.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/fabian-gubler/chatapp.git
+   ```
+2. Navigate to the project directory and install the dependencies for both frontend and backend:
+   ```bash
+   cd unichat
+   npm install
+   ```
+
+3. Run the frontend and backend servers:
+   ```bash
+   ng serve
+   ```
